@@ -3,7 +3,7 @@ const followControllers = require('./follows.controllers')
 const postFollower = (req, res) => {
     const followerId = req.user.id 
     const followingId = req.params.id 
-
+ 
     followControllers.followUser(followerId, followingId)
         .then(data => {
             res.status(201).json(data)

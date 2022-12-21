@@ -6,7 +6,7 @@ const findAllLikesFromPost = async (postId) => {
     const data = await Likes.findAll({
         where :{
             postId: postId
-        },
+        }, 
         include: {
             model: Users,
             attributes: ['id', 'firstName', 'lastName']

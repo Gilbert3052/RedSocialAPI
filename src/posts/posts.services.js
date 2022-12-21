@@ -9,7 +9,7 @@ const getAllPosts = ( req, res ) => {
             res.status(400).json({message: err.message})
         })
 }
-
+ 
 const getPostById = ( req, res ) => {
     const id = req.params.id
     postControllers.findPostById(id)
@@ -77,8 +77,4 @@ module.exports = {
     postNewPost,
     patchPost,
     deletePost
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> development

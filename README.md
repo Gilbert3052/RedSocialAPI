@@ -1,7 +1,7 @@
 # Red Social API
 
 ### Url base: http://localhost:9000/api/v1
-
+ 
 - /auth
 
   - /login -> Login con las credenciales del usuario para autenticar

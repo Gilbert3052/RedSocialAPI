@@ -11,7 +11,7 @@ const findAllUsers = async () => {
         where: {
             status: 'active'
         }
-    })
+    }) 
     return data
 }
 

@@ -11,7 +11,7 @@ const findPostById = async (id) => {
     const data = await Posts.findOne({
         where: {
             id: id
-        }
+        } 
     })
     return data
 }

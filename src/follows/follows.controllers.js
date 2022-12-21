@@ -2,7 +2,7 @@ const uuid = require('uuid')
 
 const Follows = require('../models/follows.models')
 const Users = require('../models/users.models')
-
+ 
 const followUser = async (follower, following) => {
     const data = await Follows.create({
         id: uuid.v4(),

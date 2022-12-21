@@ -9,7 +9,7 @@ router.route('/')
     .post(passportJWT.authenticate('jwt', {session: false}), postServices.postNewPost)
 
 router.route('/:id')
-    .get(postServices.getPostById)
+    .get(postServices.getPostById) 
     .patch(passportJWT.authenticate('jwt', {session: false}), postServices.patchPost)
     .delete(passportJWT.authenticate('jwt', {session: false}), postServices.deletePost)
 
