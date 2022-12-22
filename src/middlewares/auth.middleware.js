@@ -1,5 +1,5 @@
 const JwtStrategy = require('passport-jwt').Strategy
-const { ExtractJwt } = require('passport-jwt')
+const { ExtractJwt } = require('passport-local')
 const passport = require('passport')
 
 const jwtSecret = require('../../config').api.jwtSecret
