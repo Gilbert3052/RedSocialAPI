@@ -25,16 +25,12 @@ const createLike = async (obj) => {
     })
 
     if(validate){
-<<<<<<< HEAD
-        return null
-=======
         const value = await Likes.destroy({
             where: {
                 id: validate.id
             }
         })
         return value
->>>>>>> development
     }
     
     const data = await Likes.create({

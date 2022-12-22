@@ -4,11 +4,6 @@ const authControllers = require('./auth.controllers')
 const jwtSecret = require('../../config').api.jwtSecret
 const mailer = require('../utils/mailer')
 const config = require('../../config')
-<<<<<<< HEAD
-       
-=======
-
->>>>>>> development
 const postLogin = (req, res) => {
     const {email, password} = req.body
 
@@ -43,14 +38,8 @@ const postLogin = (req, res) => {
 
 const postRecoveryToken = (req, res) => {
 
-<<<<<<< HEAD
-    const { email } = req.body     
-    if(email){
-        console.log('asdjnaskdfjbnsdkfj')
-=======
     const { email } = req.body
     if(email){
->>>>>>> development
         authControllers.createRecoveryToken(email)
         .then((data) => {
             if(data){
@@ -58,27 +47,15 @@ const postRecoveryToken = (req, res) => {
                     from: '<test.academlo@gmail.com>',
                     to: email,
                     subject: 'Recuperación de Contraseña',
-<<<<<<< HEAD
-                    html: `<a href='${config.api.host}/api/v1/auth/recovery-password/${data.id}'>${config.api.host}/api/v1/auth/recovery-password/${data.id}</a>`
-                })
-            }
-            res.status(200).json({message: 'Email sent!, Check your inbox'})
-=======
                     html: `<a href='${config.api.host}/api/v1/auth/recovery-password/${data.id}'>Recuperar contraseña</a>`
                 })
             }
             res.status(200).json({message: 'Email sended!, Check your inbox'})
 
->>>>>>> development
         })
         .catch((err) => {
             res.status(400).json({message: err.message})
         })
-<<<<<<< HEAD
-    } else {
-        res.status(400).json({message: 'Invalid Data', fields: {email: 'example@example.com'}})
-=======
->>>>>>> development
     }
 }
 
@@ -94,24 +71,12 @@ const patchPassword = (req, res) => {
                 res.status(400).json({message: 'URL expired'})
             }
         })
-<<<<<<< HEAD
-=======
-
->>>>>>> development
         .catch(err => {
             res.status(400).json({message: err.message})
         })
 }
 
 
-<<<<<<< HEAD
-
-
-
-
-
-=======
->>>>>>> development
 module.exports = {
     postLogin,
     postRecoveryToken,
